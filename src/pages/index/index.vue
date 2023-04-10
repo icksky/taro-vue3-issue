@@ -7,6 +7,13 @@
     <view class="btn">
       <nut-button type="primary" @click="handleClick('text', msg2, true)">点我</nut-button>
     </view>
+    <view>
+      <!-- 加入原生导航后正常 -->
+      <!-- <view>It's Native Navigator below</view>
+      <navigator style="color: blue;" url="/">navigator</navigator> -->
+      <view>It's Taro Navigator below</view>
+      <Navigator style="color: blue;" url="/">Taro Navigator</Navigator>
+    </view>
     <nut-toast :msg="msg2" v-model:visible="show" :type="type" :cover="cover"/>
   </view>
 </template>
@@ -14,6 +21,8 @@
 <script>
 import { reactive, toRefs } from 'vue';
 import { Dongdong } from '@nutui/icons-vue-taro';
+import { Navigator } from '@tarojs/components';
+
 export default {
   name: 'Index',
   components: {
